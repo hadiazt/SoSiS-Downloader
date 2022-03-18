@@ -1,0 +1,29 @@
+{
+  "name": "sosis-downloader",
+  "version": "0.0.1",
+  "description": "Source Of SoSiS-Downloader",
+  "main": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hadiazt/SoSiS-Downloader.git"
+  },
+  "keywords": [
+    "discord",
+    "discordbot",
+    "downloader"
+  ],
+  "author": "hadi.az",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hadiazt/SoSiS-Downloader/issues"
+  },
+  "homepage": "https://github.com/hadiazt/SoSiS-Downloader#readme",
+  "dependencies": {
+    "@discordjs/builders": "^0.8.2",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "discord.js": "^13.6.0"
+  }
+}
