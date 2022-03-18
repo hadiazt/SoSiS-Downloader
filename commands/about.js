@@ -31,7 +31,7 @@ module.exports = {
 <:space:874678195843125278>[**${client.user.username}**](https://discord.gg/CWqTygXz4T) *is a fun bot that it coded for __you__ to entertain*
 *and have a good time In Discord.*
 
-**All The Bot Messages Are In Ephemeral Mode For Users Privacy**
+**All Bot Messages Are In Ephemeral Mode For Users Privacy**
 
 **The Bot Is Using __Medias Info__ [GITHUB](https://github.com/hadiazt/medias-info) & [NPM](https://www.npmjs.com/package/medias-info) For Working**
 
