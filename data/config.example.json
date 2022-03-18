@@ -1,10 +1,10 @@
 {
     "bot": {
-        "token": "",
-        "clientId": "768503531526291499",
-        "Guildlog": "879420520351805511",
-        "Actionlog": "879418338604884049",
-        "Errorlog": "879427034558922802",
+        "token": "Bot_Token",
+        "clientId": "Bot_ClientID",
+        "Guildlog": "Bot_Join&Left_Log_ChannelID",
+        "Actionlog": "Actionlog_ChannelID",
+        "Errorlog": "Errorlog_ChannelID",
         "presence": {
             "status": "idle",
             "type": "WATCHING",
