@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
 const { src, inv, support, basecolor } = require('../data/config.json')
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('about')
