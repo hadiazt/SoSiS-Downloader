@@ -65,7 +65,7 @@ module.exports = {
                 });
 
             } else {
-                return interaction.reply({ conten: "Nothing Found For Your Entry", ephemeral: true })
+                return interaction.reply({ content: "Nothing Found For Your Entry", ephemeral: true })
             }
         })
 
