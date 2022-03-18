@@ -29,3 +29,12 @@ for (const file of eventFiles) {
 	}
 	console.log(chalk.blue(event.name + ' LOADED'));
 }
+console.log(chalk.red('--------------------------------------------'));
+client.on('guildCreate', async guild => {
+	let JoinEmbed = new MessageEmbed()
+		.setDescription('**<:space:874678195843125278><:right:874690882417360986> A New Guild Has Been Submited**')
+		.setAuthor({ name: guild.name, iconURL: guild.iconURL({ dynamic: true }) })
+		.setColor('#0fe694')
+	client.channels.cache.get(config.BOT_LOG).send({ embeds: [JoinEmbed] });
+});
+// --------------------------------------------
