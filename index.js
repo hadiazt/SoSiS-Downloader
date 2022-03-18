@@ -1,4 +1,4 @@
-const { token, Guildlog } = require('./data/config.json').bot
+const { token, Guildlog, Errorlog } = require('./data/config.json').bot
 
 const chalk = require('chalk')
 const { readdirSync } = require("fs");
@@ -45,4 +45,22 @@ client.on('guildDelete', async guild => {
 		.setAuthor({ name: guild.name, iconURL: guild.iconURL({ dynamic: true }) })
 		.setColor('#ff0000')
 	client.channels.cache.get(Guildlog).send({ embeds: [LeftEmbed] });
+});
+
+
+// -------------------------------------------- //
+process.on('unhandledRejection', err => {
+
+	var errembed = new MessageEmbed()
+		.setTitle(':warning: New Error')
+		.setColor('YELLOW')
+		.addFields(
+			{ name: ':pushpin: Type: ', value: `\`\`\`${err.name + "".split("", 150).join("") || "N/A"}\`\`\`` },
+			{
+				name: ':page_with_curl: Reason: ',
+				value: `\`\`\`${err.message + "".split("", 150).join("") || "N/A"}\`\`\``
+			},
+		)
+		.setTimestamp()
+	client.channels.cache.get(Errorlog).send({ embeds: [errembed] })
 });
