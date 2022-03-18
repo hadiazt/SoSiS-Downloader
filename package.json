@@ -25,6 +25,7 @@
     "@discordjs/builders": "^0.8.2",
     "@discordjs/rest": "^0.1.0-canary.0",
     "discord.js": "^13.6.0",
-    "chalk": "^4.1.2"
+    "chalk": "^4.1.2",
+    "medias-info":"^0.0.4"
   }
 }
