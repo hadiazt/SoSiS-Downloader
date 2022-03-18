@@ -31,6 +31,8 @@ module.exports = {
 <:space:874678195843125278>[**${client.user.username}**](https://discord.gg/CWqTygXz4T) *is a fun bot that it coded for __you__ to entertain*
 *and have a good time In Discord.*
 
+**The Bot Is Using __Medias Info__ [GITHUB](https://github.com/hadiazt/medias-info) & [NPM](https://www.npmjs.com/package/medias-info) For Working**
+
 **SoSiS Team:**
 <:space:874678195843125278><:right:874690882417360986> [Hadi.Az](https://github.com/hadiazt/)
 <:space:874678195843125278><:right:874690882417360986> [im-vernix](https://github.com/Mani-Vernix)
