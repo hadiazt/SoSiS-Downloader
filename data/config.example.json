@@ -1,0 +1,18 @@
+{
+    "bot": {
+        "token": "",
+        "clientId": "768503531526291499",
+        "Guildlog": "879420520351805511",
+        "Actionlog": "879418338604884049",
+        "Errorlog": "879427034558922802",
+        "presence": {
+            "status": "idle",
+            "type": "WATCHING",
+            "name": "Codes . . ."
+        }
+    },
+    "inv": "",
+    "src": "https://github.com/hadiazt/SoSiS-Downloader",
+    "support": "",
+    "basecolor":"#f9ad4d"
+}
