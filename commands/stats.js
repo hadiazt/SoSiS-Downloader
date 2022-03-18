@@ -17,7 +17,7 @@ module.exports = {
 
         const supportmsg = new MessageEmbed()
             .setTitle('Bot Stats')
-            .setColor('#0fe694')
+            .setColor(basecolor)
             .setDescription(`
 <:space:874678195843125278><:airplane_emoji:914500272087236628> *Guilds Count : `+ '`' + client.guilds.cache.size + '`' + `*
 
