@@ -1,4 +1,4 @@
-const { token, Guildlog, Errorlog } = require('./data/config.json').bot
+const { token, Guildlog, Errorlog, Actionlog } = require('./data/config.json').bot
 
 const chalk = require('chalk')
 const { readdirSync } = require("fs");
