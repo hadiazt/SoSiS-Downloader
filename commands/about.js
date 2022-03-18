@@ -28,8 +28,8 @@ module.exports = {
             .setTitle(`<:sosis_2:914467249157439488> About ${client.user.username}:`)
             .setThumbnail(client.user.displayAvatarURL({ size: 2048 }))
             .setDescription(`
-<:space:874678195843125278>[**${client.user.username}**](https://discord.gg/CWqTygXz4T) *is a fun bot that it coded for __you__ to entertain*
-*and have a good time In Discord.*
+<:space:874678195843125278>[**${client.user.username}**](https://discord.gg/CWqTygXz4T) is the most complete bot in the field of downloaders 
+that can provide you with anything __you__ can think of in discord environment.
 
 **All Bot Messages Are In Ephemeral Mode For Users Privacy**
 
