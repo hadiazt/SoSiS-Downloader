@@ -47,7 +47,29 @@ client.on('guildDelete', async guild => {
 	client.channels.cache.get(Guildlog).send({ embeds: [LeftEmbed] });
 });
 
+// -------------------------------------------- //
 
+client.on('interactionCreate', async interaction => {
+	if (!interaction.isCommand()) return;
+
+	const command = client.commands.get(interaction.commandName);
+
+	if (!command) return;
+
+	try {
+		if (interaction.guild) {
+			await command.execute(interaction, client);
+			client.channels.cache.get(Actionlog).send('```\n' + `${interaction.commandName} Triggerd In ${interaction.guild.name} | ${interaction.channel.name} By ${interaction.user.tag}` + '\n```')
+		} else {
+			return interaction.reply({ content: 'Interactions Only Works In Servers', ephemeral: true });
+		}
+
+	} catch (error) {
+		console.error(error);
+		client.channels.cache.get(Errorlog).send('```\n' + error + '\n```')
+		return interaction.reply({ content: `There was an error while executing this command!\nAsk Developers In : ${config.supportserver}`, ephemeral: true });
+	}
+});
 // -------------------------------------------- //
 process.on('unhandledRejection', err => {
 
