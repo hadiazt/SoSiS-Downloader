@@ -6,7 +6,7 @@ const { Database } = require('beta.db')
 const db = new Database('./data/config.json')
 // --------------------------------------------
 
-const { Client, Intents, Collection , MessageEmbed } = require('discord.js')
+const { Client, Intents, Collection, MessageEmbed } = require('discord.js')
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] })
 client.login(token)
 
@@ -60,7 +60,7 @@ client.on('interactionCreate', async interaction => {
 	try {
 		if (interaction.guild) {
 			await command.execute(interaction, client);
-			db.add('USAGE', 1)	
+			db.add('USAGE', 1)
 			client.channels.cache.get(Actionlog).send('```\n' + `${interaction.commandName} Triggerd In ${interaction.guild.name} | ${interaction.channel.name} By ${interaction.user.tag}` + '\n```')
 		} else {
 			return interaction.reply({ content: 'Interactions Only Works In Servers', ephemeral: true });
