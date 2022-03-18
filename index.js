@@ -38,3 +38,10 @@ client.on('guildCreate', async guild => {
 	client.channels.cache.get(config.BOT_LOG).send({ embeds: [JoinEmbed] });
 });
 // --------------------------------------------
+client.on('guildDelete', async guild => {
+	let LeftEmbed = new MessageEmbed()
+		.setDescription('**<:space:874678195843125278><:right:874690882417360986> A Guild Has Been Removed **')
+		.setAuthor({ name: guild.name, iconURL: guild.iconURL({ dynamic: true }) })
+		.setColor('#ff0000')
+	client.channels.cache.get(config.BOT_LOG).send({ embeds: [LeftEmbed] });
+});
