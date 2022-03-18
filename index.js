@@ -4,7 +4,7 @@ const { readdirSync } = require("fs");
 
 // --------------------------------------------
 
-const { Client, Intents , Collection } = require('discord.js')
+const { Client, Intents, Collection } = require('discord.js')
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] })
 client.login(token)
 
