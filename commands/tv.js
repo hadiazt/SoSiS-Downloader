@@ -6,8 +6,12 @@ const { basecolor } = require('../data/config.json')
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('tv')
-        .setDescription('Search Your Entry On TV Category'),
-
+        .setDescription('Search Your Entry On TV Category')
+        .addStringOption(option =>
+            option.setName('enrty')
+                .setDescription('Your Entry For Search')
+                .setRequired(true)
+        ),
     async execute(interaction, client) {
         var name = interaction.options.get('enrty').value;
 
@@ -52,11 +56,11 @@ module.exports = {
 
                 collector.on('collect', async (btn) => {
                     if (btn.customId === 'first') {
-                        btn.update({ content: `You Selected :\n${items[0].title}\n[__Click To Donwload__](${items[0].link})`, ephemeral: true })
+                        await btn.update({ content: `You Selected :\n${items[0].title}\n[__Click To Donwload__](${items[0].link})`, ephemeral: true })
                     } else if (btn.customId === 'second') {
-                        btn.update({ content: `You Selected :\n${items[1].title}\n[__Click To Donwload__](${items[0].link})`, ephemeral: true })
+                        await btn.update({ content: `You Selected :\n${items[1].title}\n[__Click To Donwload__](${items[0].link})`, ephemeral: true })
                     } else if (btn.customId === 'third') {
-                        btn.update({ content: `You Selected :\n${items[2].title}\n[__Click To Donwload__](${items[0].link})`, ephemeral: true })
+                        await btn.update({ content: `You Selected :\n${items[2].title}\n[__Click To Donwload__](${items[0].link})`, ephemeral: true })
                     }
                 });
 
