@@ -2,7 +2,8 @@ const { token, Guildlog, Errorlog, Actionlog } = require('./data/config.json').b
 
 const chalk = require('chalk')
 const { readdirSync } = require("fs");
-
+const { Database } = require('beta.db')
+const db = new Database('./data/config.json')
 // --------------------------------------------
 
 const { Client, Intents, Collection , MessageEmbed } = require('discord.js')
@@ -59,6 +60,7 @@ client.on('interactionCreate', async interaction => {
 	try {
 		if (interaction.guild) {
 			await command.execute(interaction, client);
+			db.add('USAGE', 1)	
 			client.channels.cache.get(Actionlog).send('```\n' + `${interaction.commandName} Triggerd In ${interaction.guild.name} | ${interaction.channel.name} By ${interaction.user.tag}` + '\n```')
 		} else {
 			return interaction.reply({ content: 'Interactions Only Works In Servers', ephemeral: true });
