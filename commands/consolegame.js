@@ -21,7 +21,7 @@ module.exports = {
                 const MSGBTN = new MessageActionRow()
                 const MSGEMBED = new MessageEmbed()
                     .setColor(basecolor)
-                    .setTitle('You Entry Top 5 Result')
+                    .setTitle('You Entry Top 3 Result')
 
                 if (items[0]) {
                     MSGEMBED.addField(`1. **${items[0].title}**`, `*(${items[0].size})*`, true)
